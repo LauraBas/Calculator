@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cal cu la tor</title>
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+<div id="all">
+    <div class="container">
+        <div id=display></div>
+        <button onclick="reset('0')" class="button" id="clear">AC</button>
+        <button onclick="simbol('/')" class="button" id="divide">/</button>
+
+        <button onclick="numero('7')" class="button" id="seven">7</button>
+        <button onclick="numero('8')" class="button" id="eight">8</button>
+        <button onclick="numero('9')" class="button" id="nine">9</button>
+        <button onclick="simbol('x')" class="button" id="multiply">X</button>
+
+        <button onclick="numero('4')" class="button" id="four">4</button>
+        <button onclick="numero('5')" class="button" id="five">5</button>
+        <button onclick="numero('6')" class="button" id="six">6</button>
+        <button onclick="simbol('-')" class="button" id="subtract">-</button>
+
+
+        <button onclick="numero('1')" class="button" id="one">1</button>
+        <button onclick="numero('2')" class="button" id="two">2</button>
+        <button onclick="numero('3')" class="button" id="three">3</button>
+        <button onclick="simbol('+')" class="button" id="add">+</button>
+
+
+        <button onclick="numero('0')" class="button" id="zero">0</button>
+        <button onclick="decimal()" class="button" id="decimal">.</button>
+        <button onclick="result()" class="button" id="equals">=</button>
+
+    </div>
+</div>
+<footer id="chau">Made with Love</footer>
+<!-- partial -->
+<script src="./script.js"></script>
+
+</body>
+</html>
