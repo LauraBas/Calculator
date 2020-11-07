@@ -23,10 +23,6 @@ function addNumberToDisp(valor) {
     }
 }
 
-//["2"],2 -> ["22"]
-//["2", "+"],2 -> ["2", "+", "2"]
-//["2", "-"],2 -> ["2", "-", "2"]
-//["2", "+", "-"],2 -> ["2", "+", "-2"]
 
 function lastIsNegativeOperator() {
     return disp[disp.length - 1] == "-" && isSimbol(disp[disp.length - 2]);
@@ -62,8 +58,7 @@ function reset() {
     update()
 }
 
-//["2", "+", "-"], "*" -> ["2", "*"]
-//["2", "+"], "-" -> ["2", "+", "-"]
+
 
 function simbol(s) {
     let last = disp[disp.length - 1];
@@ -71,14 +66,14 @@ function simbol(s) {
     let lastIsMinus = last == "-";
     let valorEsMenos = s == "-";
 
-    // last, secondlast, valor
+   
 
     if (lastIsMinus && isSimbol(secondLast)) {
-        // [1 + -]
+        
         disp.pop()
-        // [1 +]
+       
         disp[disp.length - 1] = s
-        // [1 s]
+       
     } else if (lastIsMinus) {
         disp[disp.length - 1] = s
     } else if (isSimbol(last) && !lastIsMinus && valorEsMenos) {
